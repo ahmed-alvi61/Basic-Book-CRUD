@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "d9ada922-da90-4d94-b264-0b7b37dddf9d",
+		"name": "Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34884196"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8020/api/books/deleteBook/6757ee4b1cd4d2c69fa8e5f1",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"books",
+								"deleteBook",
+								"6757ee4b1cd4d2c69fa8e5f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8020/api/books/getBookById/6757ee4b1cd4d2c69fa8e5f1",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"books",
+								"getBookById",
+								"6757ee4b1cd4d2c69fa8e5f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book Detail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"The Great Gatsby - Revised\",\r\n    \"numberOfPages\": 192\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8020/api/books/updateBookDetail/6757ec95465b38013a4978ba",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"books",
+								"updateBookDetail",
+								"6757ec95465b38013a4978ba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"title\": \"The Great Gatsby\",\r\n \"author\": \"F. Scott Fitzgerald\",\r\n \"publishedDate\": \"1925-04-10\",\r\n \"numberOfPages\": 180\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8020/api/books/createNewBook",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"books",
+								"createNewBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8020/api/books/allBooks",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"books",
+								"allBooks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"John Doe\",\r\n    \"username\": \"johndoe\",\r\n    \"email\": \"johndoe@example.com\",\r\n    \"phone\": \"+1234567890\",\r\n    \"password\": \"12345@aA\",\r\n    \"profilePicture\": \"https://example.com/profile.jpg\",\r\n    \"country\": \"USA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8020/api/users/sign-up",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"users",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"johndoe@example.com\",\r\n    \"password\": \"12345@aA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8020/api/users/sign-in",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"users",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8020/api/users/sign-out/673ecfc480c6ba143f1d8d02",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"users",
+								"sign-out",
+								"673ecfc480c6ba143f1d8d02"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiVTJGc2RHVmtYMStjcUFkNFNnRjV2M2I1UlZOcFEwQ2oyZk92MTUzUWIwejVrTFlhdzJvbjQ4Z3loZUg2UlkwUWNtM09FaE13QlhSbDY4Tkg4dGs1akYrSUpwNkJpYzZKdzBtSDloL0xXbU09IiwiaWF0IjoxNzMzODI2NzE5LCJleHAiOjE3MzM4Mjc2MTl9.Vjg5zaXvxQdqmnojCr6aJnVEoFtOx6Ht_XLBpLgO7Lg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
